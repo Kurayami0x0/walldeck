@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project is entirely AI-generated. While care has been taken to ensure quality, users should review and verify the code for their specific use cases.
+
 # walldeck
 
 A wallpaper picker for Wayland. Opens as a layer-shell overlay, shows your
