@@ -1,0 +1,24 @@
+[package]
+name = "walldeck"
+version = "0.1.0"
+edition = "2021"
+description = "A Wayland layer-shell wallpaper picker for awww and compatible backends"
+license = "MIT"
+repository = "https://github.com/YOUR_USERNAME/walldeck"
+readme = "README.md"
+keywords = ["wayland", "wallpaper", "layer-shell", "picker"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+smithay-client-toolkit = "0.19"
+wayland-client = "0.31"
+image = { version = "0.24", default-features = false, features = ["jpeg", "png", "gif", "bmp", "webp"] }
+rayon = "1.10"
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[[bin]]
+name = "walldeck"
+path = "src/main.rs"
