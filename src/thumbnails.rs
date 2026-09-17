@@ -82,11 +82,7 @@ pub fn ensure_thumbnails(cfg: &Config, images: &[String]) -> std::io::Result<()>
     fs::create_dir_all(&cfg.cache_dir).map_err(|e| {
         std::io::Error::new(
             e.kind(),
-            format!(
-                "{}: {e}{}",
-                cfg.cache_dir.display(),
-                ownership_hint(&cfg.cache_dir)
-            ),
+            format!("{}: {e}{}", cfg.cache_dir.display(), ownership_hint(&cfg.cache_dir)),
         )
     })?;
 
